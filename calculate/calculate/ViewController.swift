@@ -9,64 +9,53 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var firstNum: UITextField!
-    
     @IBOutlet weak var SecondNum: UITextField!
-    
-    
     @IBOutlet weak var resultLabel: UILabel!
     
-    
+    var result = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func sumClick(_ sender: Any) {
         
         if let firstNum = Int(firstNum.text!){
            if let SecondNum = Int(SecondNum.text!){
-              let result = firstNum + SecondNum
+            result = firstNum + SecondNum
                  resultLabel.text = String(result)
             }
         }
-        
-        
-        
     }
     
     @IBAction func negClick(_ sender: Any) {
         if let firstNum = Int(firstNum.text!){
            if let SecondNum = Int(SecondNum.text!){
-              let result = firstNum - SecondNum
+            result = firstNum - SecondNum
                  resultLabel.text = String(result)
             }
         }
-
     }
-    
     
     @IBAction func multiplyClick(_ sender: Any) {
         if let firstNum = Int(firstNum.text!){
            if let SecondNum = Int(SecondNum.text!){
-              let result = firstNum * SecondNum
+            result = firstNum * SecondNum
                  resultLabel.text = String(result)
             }
         }
-
     }
     
     @IBAction func divideClick(_ sender: Any) {
         if let firstNum = Int(firstNum.text!){
            if let SecondNum = Int(SecondNum.text!){
-              let result = firstNum / SecondNum
+            result = firstNum / SecondNum
                  resultLabel.text = String(result)
             }
         }
-
     }
-    
-    
     
 }
 
